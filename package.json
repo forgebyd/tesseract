@@ -1,0 +1,23 @@
+{
+    "name": "tesseract",
+    "description": "A todo application that almost understands the 4D of your todo list",
+    "license": "MIT",
+    "version": "0.0.0",
+    "type": "module",
+    "private": true,
+    "homepage": "https://github.com/forgebyd/tesseract",
+    "readme": "https://github.com/forgebyd/tesseract/blob/main/README.md",
+    "author": {
+        "email": "ini.dwiii@gmail.com",
+        "name": "forgebyd",
+        "url": "https://github.com/forgebyd"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/forgebyd/tesseract.git"
+    },
+    "volta": {
+        "node": "24.12.0",
+        "pnpm": "10.25.0"
+    }
+}
