@@ -1,6 +1,10 @@
 import pluginTailwindCss from '@tailwindcss/vite';
 import pluginReact from '@vitejs/plugin-react';
-import pluginTsconfig from 'vite-tsconfig-paths';
+import pluginTsConfigPaths from 'vite-tsconfig-paths';
+
+import { devtools as pluginTanStackDevTools } from '@tanstack/devtools-vite';
+import { tanstackStart as pluginTanStackStart } from '@tanstack/react-start/plugin/vite';
+import { nitro as pluginNitro } from 'nitro/vite';
 
 import { defineConfig, PluginOption } from 'vite';
 
@@ -22,10 +26,33 @@ const config = defineConfig({
    * @see https://vite.dev/guide/using-plugins
    */
   plugins: [
-    pluginTsconfig(),
+    pluginTanStackDevTools(),
+    pluginNitro(),
+    pluginTsConfigPaths({ projects: ['./tsconfig.json'] }),
     pluginTailwindCss(),
+    pluginTanStackStart({
+      srcDirectory: 'source',
+
+      sitemap: {
+        enabled: true,
+      },
+
+      /**
+       * TanStack React Router configuration goes here,
+       * rewriting the name of generated routeTree
+       * @see https://tanstack.com/router/latest/docs/
+       */
+      router: {
+        generatedRouteTree: 'routeTree.ts',
+        quoteStyle: 'single',
+      },
+    }),
     pluginReact({
       babel: {
+        /**
+         * Enable react compiler plugin
+         * @see https://react.dev/learn/react-compiler/introduction
+         */
         plugins: ['babel-plugin-react-compiler'],
       },
     }),

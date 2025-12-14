@@ -5,8 +5,16 @@ catalogs:
         "@commitlint/cz-commitlint": ^20.2.0
         "@eslint/js": ^9.39.2
         "@tailwindcss/vite": ^4.1.18
+        "@tanstack/devtools-vite": ^0.3.12
         "@tanstack/eslint-plugin-query": ^5.91.2
         "@tanstack/eslint-plugin-router": ^1.141.0
+        "@tanstack/react-devtools": ^0.8.4
+        "@tanstack/react-query": ^5.90.12
+        "@tanstack/react-query-devtools": ^5.91.1
+        "@tanstack/react-router": ^1.141.2
+        "@tanstack/react-router-devtools": ^1.141.2
+        "@tanstack/react-router-ssr-query": ^1.141.2
+        "@tanstack/react-start": ^1.141.3
         "@types/node": ^25.0.2
         "@types/react": ^19.2.7
         "@types/react-dom": ^19.2.3
@@ -25,6 +33,7 @@ catalogs:
         inquirer: ^9.3.8
         lint-staged: ^16.2.7
         lucide-react: ^0.561.0
+        nitro: 3.0.1-alpha.1
         prettier: ^3.7.4
         prettier-plugin-prisma: ^5.0.0
         react: ^19.2.3
