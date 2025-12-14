@@ -27,7 +27,13 @@ const config = defineConfig({
    */
   plugins: [
     pluginTanStackDevTools(),
-    pluginNitro(),
+    pluginNitro({
+      output: {
+        dir: 'dist',
+        publicDir: 'dist/public',
+        serverDir: 'dist/server',
+      },
+    }),
     pluginTsConfigPaths({ projects: ['./tsconfig.json'] }),
     pluginTailwindCss(),
     pluginTanStackStart({
