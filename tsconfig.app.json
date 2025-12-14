@@ -22,7 +22,7 @@
         "skipLibCheck": true,
         "verbatimModuleSyntax": false,
 
-        "types": [],
+        "types": ["vite/client", "react", "react-dom", "react/jsx-runtime"],
 
         "strict": true,
         "strictNullChecks": true,
