@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json.schemastore.org/commitlintrc.json",
+    "extends": ["@commitlint/config-conventional"],
+    "rules": {
+        "body-max-length": [2, "always", 300],
+        "body-min-length": [2, "always", 0],
+        "signed-off-by": [2, "always", "Signed-off-by"]
+    }
+}

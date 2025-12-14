@@ -21,10 +21,16 @@
         "pnpm": "10.25.0"
     },
     "scripts": {
+        "commit": "git-cz --signoff",
         "prettier.format": "prettier --write .",
         "prettier.check": "prettier --check ."
     },
     "devDependencies": {
+        "@commitlint/cli": "catalog:",
+        "@commitlint/config-conventional": "catalog:",
+        "@commitlint/cz-commitlint": "catalog:",
+        "commitizen": "catalog:",
+        "inquirer": "catalog:",
         "prettier": "catalog:",
         "prettier-plugin-prisma": "catalog:"
     }

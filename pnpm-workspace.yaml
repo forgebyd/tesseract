@@ -1,4 +1,9 @@
 catalogs:
     default:
+        "@commitlint/cli": ^20.2.0
+        "@commitlint/config-conventional": ^20.2.0
+        "@commitlint/cz-commitlint": ^20.2.0
+        commitizen: ^4.3.1
+        inquirer: ^9.3.8
         prettier: ^3.7.4
         prettier-plugin-prisma: ^5.0.0
