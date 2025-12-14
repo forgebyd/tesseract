@@ -22,6 +22,7 @@
     },
     "scripts": {
         "commit": "git-cz --signoff",
+        "lint.project": "eslint",
         "lint.type": "tsc",
         "prettier.format": "prettier --write .",
         "prettier.check": "prettier --check ."
@@ -30,11 +31,21 @@
         "@commitlint/cli": "catalog:",
         "@commitlint/config-conventional": "catalog:",
         "@commitlint/cz-commitlint": "catalog:",
+        "@eslint/js": "catalog:",
+        "@tanstack/eslint-plugin-query": "catalog:",
+        "@tanstack/eslint-plugin-router": "catalog:",
         "@types/node": "catalog:",
         "commitizen": "catalog:",
+        "eslint": "catalog:",
+        "eslint-plugin-react": "catalog:",
+        "eslint-plugin-react-compiler": "catalog:",
+        "eslint-plugin-react-hooks": "catalog:",
+        "eslint-plugin-react-refresh": "catalog:",
+        "globals": "catalog:",
         "inquirer": "catalog:",
         "prettier": "catalog:",
         "prettier-plugin-prisma": "catalog:",
-        "typescript": "catalog:"
+        "typescript": "catalog:",
+        "typescript-eslint": "catalog:"
     }
 }
