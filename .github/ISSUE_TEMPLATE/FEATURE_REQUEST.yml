@@ -1,0 +1,55 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for Tesseract.
+title: "[FEATURE]: <title>"
+assignees:
+    - forgebyd
+labels:
+    - feature
+    - triage
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Thank you for your idea in improving Tesseract! 🤝
+              To help us prioritize, please describe:
+              - 🎯 **What problem** this solves?
+              - 🧠 **How it fits** Tesseract’s goals? (simple, reliable, type-safe)
+    - type: textarea
+      id: problem
+      attributes:
+          label: What gap or pain point does this address?
+          placeholder: |
+              e.g. Users can't prioritize tasks — everything feels equally urgent.
+      validations:
+          required: true
+    - type: textarea
+      id: solution
+      attributes:
+          label: What is the proposed solution?
+          description: Describe how should this problem be solved. (UI, data flow, tech hints OK)
+          placeholder: |
+              e.g. Users can now prioritize tasks based on their importance.
+      validations:
+          required: true
+    - type: textarea
+      id: alternative
+      attributes:
+          label: Is there alternative solutions?
+          description: Describe the other ways to solve the problem and why this solution is better.
+          placeholder: |
+              e.g. Using tags to prioritize tasks.
+      validations:
+          required: false
+    - type: checkboxes
+      id: checklist
+      attributes:
+          label: Before Submitting
+          description: |
+              By submitting this issue, you agree to the following:
+          options:
+              - label: I have checked for similar requests.
+                required: true
+              - label: I am sure this is a good idea.
+                required: true
+              - label: I am sure this is aligned with the project's goals.
+                required: true

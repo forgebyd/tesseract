@@ -1,0 +1,90 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior in Tesseract.
+title: "[BUG]: <title>"
+assignees:
+    - forgebyd
+labels:
+    - bug
+    - triage
+
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Thank you for helping improve Tesseract! 🤝
+              Please kindly fill out the info below — the more precise, the faster we can fix it.
+    - type: input
+      id: contact
+      attributes:
+          label: How can we get in touch with you if needed?
+          placeholder: "ex. email@example.com"
+      validations:
+          required: false
+    - type: input
+      id: version
+      attributes:
+          label: What version of Tesseract are you using?
+          description: Git commit hash or tag (e.g., `v1.2.0` or `a1b2c3d`)
+          placeholder: "v1.1.0 or main@a1b2c3d"
+      validations:
+          required: true
+    - type: dropdown
+      id: browser
+      attributes:
+          label: What browsers are you seeing the issue in?
+          multiple: true
+          options:
+              - Firefox
+              - Chrome
+              - Safari
+              - Microsoft Edge
+    - type: textarea
+      id: step
+      attributes:
+          label: How you reproduced the bug?
+          description: Clear, numbered steps to reproduce the bug.
+          placeholder: |
+              1. Open Tesseract
+              1. Do something
+              1. See the bug
+      validations:
+          required: true
+    - type: textarea
+      id: expected
+      attributes:
+          label: What is the expected behavior?
+          placeholder: "The app should not crash"
+      validations:
+          required: true
+    - type: textarea
+      id: actual
+      attributes:
+          label: What is the actual behavior?
+          placeholder: "The app crashes"
+      validations:
+          required: true
+    - type: textarea
+      id: log
+      attributes:
+          label: Any additional log output? (e.g., console, network, Prisma, etc.)
+          description: |
+              Please copy and paste any relevant log output here.
+              This will be formatted as code blocks, so no need to use backticks.
+          render: bash
+      validations:
+          required: false
+    - type: checkboxes
+      id: checklist
+      attributes:
+          label: Before Submitting
+          description: |
+              By submitting this issue, you agree to the following:
+          options:
+              - label: I agree to follow this project's Code of Conduct.
+                required: true
+              - label: I have checked for existing issues.
+                required: true
+              - label: I have reproduced the issue consistently.
+                required: true
+              - label: I have included a minimal, reproducible example.
+                required: true
