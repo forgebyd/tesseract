@@ -22,8 +22,9 @@
     },
     "scripts": {
         "commit": "git-cz --signoff",
-        "lint.project": "eslint",
-        "lint.type": "tsc",
+        "lint.fix": "eslint --fix",
+        "lint.check.project": "eslint",
+        "lint.check.type": "tsc -p tsconfig.json",
         "prettier.format": "prettier --write .",
         "prettier.check": "prettier --check ."
     },
@@ -43,6 +44,7 @@
         "eslint-plugin-react-refresh": "catalog:",
         "globals": "catalog:",
         "inquirer": "catalog:",
+        "lint-staged": "catalog:",
         "prettier": "catalog:",
         "prettier-plugin-prisma": "catalog:",
         "typescript": "catalog:",
