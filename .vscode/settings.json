@@ -1,0 +1,34 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit",
+        "source.sortImports": "explicit"
+    },
+
+    "prettier.configPath": "prettier.config.js",
+    "prettier.enable": true,
+    "prettier.enableDebugLogs": false,
+
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.importModuleSpecifierEnding": "js",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifierEnding": "js",
+
+    "files.readonlyInclude": {
+        "**/routeTree.ts": true,
+        "**/routeTree.gen.ts": true
+    },
+
+    "files.watcherExclude": {
+        "**/routeTree.ts": true,
+        "**/routeTree.gen.ts": true
+    },
+
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/routeTree.ts": true,
+        "**/routeTree.gen.ts": true
+    }
+}
