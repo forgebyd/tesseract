@@ -22,6 +22,7 @@
     },
     "scripts": {
         "commit": "git-cz --signoff",
+        "lint.type": "tsc",
         "prettier.format": "prettier --write .",
         "prettier.check": "prettier --check ."
     },
@@ -29,9 +30,11 @@
         "@commitlint/cli": "catalog:",
         "@commitlint/config-conventional": "catalog:",
         "@commitlint/cz-commitlint": "catalog:",
+        "@types/node": "catalog:",
         "commitizen": "catalog:",
         "inquirer": "catalog:",
         "prettier": "catalog:",
-        "prettier-plugin-prisma": "catalog:"
+        "prettier-plugin-prisma": "catalog:",
+        "typescript": "catalog:"
     }
 }

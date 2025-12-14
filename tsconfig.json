@@ -1,0 +1,11 @@
+{
+    "$schema": "https://www.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["./source/*"]
+        }
+    },
+    "files": [],
+    "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+}

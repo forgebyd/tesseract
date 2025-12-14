@@ -1,0 +1,31 @@
+{
+    "$schema": "https://www.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["ES2022"],
+
+        "module": "ESNext",
+        "moduleDetection": "force",
+        "moduleResolution": "bundler",
+
+        "allowImportingTsExtensions": true,
+        "allowJs": true,
+        "erasableSyntaxOnly": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "verbatimModuleSyntax": false,
+
+        "strict": true,
+        "strictNullChecks": true,
+        "noEmit": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo"
+    },
+    "include": ["**/*.config.ts", "**/*.config.js"]
+}
