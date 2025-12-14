@@ -1,7 +1,8 @@
+import pluginTailwindCss from '@tailwindcss/vite';
 import pluginReact from '@vitejs/plugin-react';
 import pluginTsconfig from 'vite-tsconfig-paths';
 
-import { defineConfig } from 'vite';
+import { defineConfig, PluginOption } from 'vite';
 
 const config = defineConfig({
   build: {
@@ -22,12 +23,13 @@ const config = defineConfig({
    */
   plugins: [
     pluginTsconfig(),
+    pluginTailwindCss(),
     pluginReact({
       babel: {
         plugins: ['babel-plugin-react-compiler'],
       },
     }),
-  ],
+  ] satisfies PluginOption[],
 });
 
 export default config;
