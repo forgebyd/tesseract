@@ -1,0 +1,19 @@
+{
+    "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+    "enabledFileTypes": {
+        "markdown": true,
+        "javascript": true,
+        "json": true,
+        "typescript": true,
+        "yaml": true
+    },
+    "ignorePaths": [
+        "node_modules",
+        "pnpm-lock.yaml",
+        "pnpm-workspace.yaml",
+        "build",
+        "dist",
+        "out"
+    ],
+    "words": ["forgebyd", "tesseract"]
+}
