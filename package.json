@@ -29,6 +29,10 @@
         "prettier.format": "prettier --write .",
         "prettier.check": "prettier --check ."
     },
+    "dependencies": {
+        "react": "catalog:",
+        "react-dom": "catalog:"
+    },
     "devDependencies": {
         "@commitlint/cli": "catalog:",
         "@commitlint/config-conventional": "catalog:",
@@ -37,6 +41,10 @@
         "@tanstack/eslint-plugin-query": "catalog:",
         "@tanstack/eslint-plugin-router": "catalog:",
         "@types/node": "catalog:",
+        "@types/react": "catalog:",
+        "@types/react-dom": "catalog:",
+        "@vitejs/plugin-react": "catalog:",
+        "babel-plugin-react-compiler": "catalog:",
         "commitizen": "catalog:",
         "eslint": "catalog:",
         "eslint-plugin-react": "catalog:",
@@ -50,6 +58,8 @@
         "prettier": "catalog:",
         "prettier-plugin-prisma": "catalog:",
         "typescript": "catalog:",
-        "typescript-eslint": "catalog:"
+        "typescript-eslint": "catalog:",
+        "vite": "catalog:",
+        "vite-tsconfig-paths": "catalog:"
     }
 }
