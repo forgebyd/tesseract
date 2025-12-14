@@ -48,6 +48,9 @@ catalogs:
         globals:
             specifier: ^16.5.0
             version: 16.5.0
+        husky:
+            specifier: ^9.1.7
+            version: 9.1.7
         inquirer:
             specifier: ^9.3.8
             version: 9.3.8
@@ -112,6 +115,9 @@ importers:
             globals:
                 specifier: "catalog:"
                 version: 16.5.0
+            husky:
+                specifier: "catalog:"
+                version: 9.1.7
             inquirer:
                 specifier: "catalog:"
                 version: 9.3.8(@types/node@25.0.2)
@@ -1888,6 +1894,14 @@ packages:
                 integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==
             }
         engines: { node: ">=0.10.0" }
+
+    husky@9.1.7:
+        resolution:
+            {
+                integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==
+            }
+        engines: { node: ">=18" }
+        hasBin: true
 
     iconv-lite@0.4.24:
         resolution:
@@ -4852,6 +4866,8 @@ snapshots:
     homedir-polyfill@1.0.3:
         dependencies:
             parse-passwd: 1.0.0
+
+    husky@9.1.7: {}
 
     iconv-lite@0.4.24:
         dependencies:

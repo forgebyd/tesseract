@@ -25,6 +25,7 @@
         "lint.fix": "eslint --fix",
         "lint.check.project": "eslint",
         "lint.check.type": "tsc -p tsconfig.json",
+        "prepare": "husky",
         "prettier.format": "prettier --write .",
         "prettier.check": "prettier --check ."
     },
@@ -43,6 +44,7 @@
         "eslint-plugin-react-hooks": "catalog:",
         "eslint-plugin-react-refresh": "catalog:",
         "globals": "catalog:",
+        "husky": "catalog:",
         "inquirer": "catalog:",
         "lint-staged": "catalog:",
         "prettier": "catalog:",
