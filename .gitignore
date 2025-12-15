@@ -6,6 +6,9 @@ node_modules
 .env.*
 !.env.example
 
+# tan-stack generated
+.tanstack
+
 # output generated
 build
 dist
