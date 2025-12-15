@@ -6,7 +6,8 @@ import { TanStackDevtools } from '@tanstack/react-devtools';
 import { ReactQueryDevtoolsPanel as TanStackQueryDevtoolsPanel } from '@tanstack/react-query-devtools';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
 
-import { Document } from '~/components/shared/Document.tsx';
+import { Document } from '~/components/shared/document.tsx';
+import { ThemeProvider } from '~/contexts/theme-context.tsx';
 
 // import globals.css as globals styles
 import styles from '~/styles/globals.css?url';
@@ -26,7 +27,9 @@ export const Route = createRootRouteWithContext<{
 function RouteComponent(): React.ReactNode {
   return (
     <Document>
-      <Outlet />
+      <ThemeProvider>
+        <Outlet />
+      </ThemeProvider>
       <TanStackDevtools
         config={{ position: 'bottom-right' }}
         plugins={[
