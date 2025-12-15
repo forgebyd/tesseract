@@ -3,6 +3,9 @@ import { setupRouterSsrQueryIntegration } from '@tanstack/react-router-ssr-query
 
 import { QueryClient } from '@tanstack/react-query';
 
+import { DefaultInternalServerError } from '~/components/error/default-internal-server-error.tsx';
+import { DefaultNotFoundError } from '~/components/error/default-not-found-error.tsx';
+
 // @ts-ignore
 import { routeTree } from '~/routeTree.ts';
 
@@ -15,18 +18,22 @@ export function getRouter() {
    * @see https://tanstack.com/start/latest/docs
    */
   const routerInstance = createRouter({
+    routeTree,
+
     context: {
       queryClient: queryClientInstance,
     },
 
-    routeTree,
     defaultPreload: 'intent',
-    defaultPreloadStaleTime: 30000,
+    defaultPreloadStaleTime: 0,
+    defaultErrorComponent: DefaultInternalServerError,
+    defaultNotFoundComponent: DefaultNotFoundError,
+    scrollRestoration: true,
   });
 
   setupRouterSsrQueryIntegration({
-    queryClient: queryClientInstance,
     router: routerInstance,
+    queryClient: queryClientInstance,
   });
 
   return routerInstance;
