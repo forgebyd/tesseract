@@ -2,11 +2,11 @@ import { HeadContent, Scripts } from '@tanstack/react-router';
 
 type DocumentProps = {
   children: React.ReactNode;
-} & React.HTMLAttributes<HTMLHtmlElement>;
+};
 
-function Document({ children, ...props }: DocumentProps): React.ReactNode {
+function Document({ children }: DocumentProps): React.ReactNode {
   return (
-    <html {...props}>
+    <html>
       <DocumentHead />
       <DocumentBody>{children}</DocumentBody>
     </html>
