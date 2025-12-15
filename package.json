@@ -28,6 +28,7 @@
         "prepare": "husky",
         "prettier.format": "prettier --write .",
         "prettier.check": "prettier --check .",
+        "start": "node ./dist/server/index.mjs",
         "v.build": "vite build",
         "v.dev": "vite dev",
         "v.preview": "vite preview"
