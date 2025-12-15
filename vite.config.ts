@@ -51,6 +51,7 @@ const config = defineConfig({
       router: {
         generatedRouteTree: 'routeTree.ts',
         quoteStyle: 'single',
+        semicolons: true,
       },
     }),
     pluginReact({
