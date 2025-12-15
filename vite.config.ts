@@ -8,10 +8,7 @@ import { nitro as pluginNitro } from 'nitro/vite';
 
 import { defineConfig, PluginOption } from 'vite';
 
-const config = defineConfig({
-  build: {
-    outDir: 'dist',
-  },
+const config = defineConfig(({ mode }) => ({
   preview: {
     host: 'localhost',
     port: 3001,
@@ -21,33 +18,33 @@ const config = defineConfig({
     port: 3000,
   },
 
-  /**
-   * Register vite plugins here
-   * @see https://vite.dev/guide/using-plugins
-   */
   plugins: [
     pluginTanStackDevTools(),
-    pluginNitro({
-      output: {
-        dir: 'dist',
-        publicDir: 'dist/public',
-        serverDir: 'dist/server',
-      },
-    }),
     pluginTsConfigPaths({ projects: ['./tsconfig.json'] }),
+
+    /**
+     * Only attach nitro plugin when it is not in development mode.
+     *
+     * It is causing some unexpected behavior, such as not loading
+     * the fallback component for 'not-found' error and crashing
+     * when running vitest.
+     *
+     * @see https://github.com/TanStack/router/issues/5476#issuecomment-3420644230
+     */
+    mode === 'production'
+      ? pluginNitro({
+          output: {
+            dir: 'dist',
+            publicDir: 'dist/public',
+            serverDir: 'dist/server',
+          },
+        })
+      : null,
+
     pluginTailwindCss(),
     pluginTanStackStart({
       srcDirectory: 'source',
 
-      sitemap: {
-        enabled: true,
-      },
-
-      /**
-       * TanStack React Router configuration goes here,
-       * rewriting the name of generated routeTree
-       * @see https://tanstack.com/router/latest/docs/
-       */
       router: {
         generatedRouteTree: 'routeTree.ts',
         quoteStyle: 'single',
@@ -56,14 +53,10 @@ const config = defineConfig({
     }),
     pluginReact({
       babel: {
-        /**
-         * Enable react compiler plugin
-         * @see https://react.dev/learn/react-compiler/introduction
-         */
         plugins: ['babel-plugin-react-compiler'],
       },
     }),
   ] satisfies PluginOption[],
-});
+}));
 
 export default config;
